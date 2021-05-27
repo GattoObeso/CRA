@@ -2,46 +2,41 @@
 
 In this work, we investigate the capabilities of Generative Pre-trained Transformers, T5(Text-To-Text Transfer Transformer) to support code review.
 
-## Pipeline
+## How to replicate our results
 
 ### Step 1 - Set up a GCS Bucket 
 This GCS Bucket will hold all the data needed for Setting up, pre-training, fine-tuning and testing our T5 model.
 To Set up a new GCS Bucket, please follow the orignal guide provided by Google. Here the link: https://cloud.google.com/storage/docs/quickstart-console.
 
-### Step 2 - Get the datasets
+### Step 2 - Get the datasets and all our utilities
+
 #### Pre-Training
-Obtained by mining (Stack Overflow)[https://www.brentozar.com/archive/2015/10/how-to-download-the-stack-overflow-database-via-bittorrent/] and (CodeSearchNet)[https://github.com/github/CodeSearchNet] data. You can download this here (!!)
+Obtained by mining (Stack Overflow)[https://www.brentozar.com/archive/2015/10/how-to-download-the-stack-overflow-database-via-bittorrent/] and (CodeSearchNet)[https://github.com/github/CodeSearchNet] data. 
 
 #### Fine-Tuning
-We will fine tune our T5 small on different datasets obtained by mining code review data from Gerrit and GitHub repositories
+We will fine tune our T5 small model on different datasets obtained by mining code review data from Gerrit and GitHub repositories
 
 ##### Fine-Tuning v1 (Small)
-Same dataset used by [Tufano et al.](https://arxiv.org/abs/2101.02518), not abstracted code and raw comments. You can download this here (!!)
+Same dataset used by [Tufano et al.](https://arxiv.org/abs/2101.02518), not abstracted code and raw comments. 
 ##### Fine-Tuning v2 (Small)
-Same dataset used by [Tufano et al.](https://arxiv.org/abs/2101.02518), not abstracted code and cleaned comments. You can download this here (!!)
+Same dataset used by [Tufano et al.](https://arxiv.org/abs/2101.02518), not abstracted code and cleaned comments.
 ##### Fine-Tuning (Large)
-Large dataset  You can download this here (!!)
+Our new Large dataset 
 
-### Step 3 - Train the [Sentencepiece](https://github.com/google/sentencepiece/blob/master/python/README.md) model
-In order to pre-train and fine-tune a (T5 small)[https://github.com/google-research/text-to-text-transfer-transformer] model, we need a new sentencepiece model to accommodate the expanded vocabulary given by the pre-training dataset.
+### (optional) Step 2.5 - Process the datasets
+All our datasets are alredy processed and it's all set up to start pre-training and fine-tuning the models
 
-```
-pip install sentencepiece
-import sentencepiece as spm
-spm.SentencePieceTrainer.train('--input=pretraining.txt --model_prefix=dl4se --vocab_size=32000 --bos_id=-1  --eos_id=1 --unk_id=2 --pad_id=0') 
-```
-The new model has to be trained on the entire pre-training corpus.
+However, if you want to replicate our pre-processing steps, you just need to follow [this](http://) Colab notebook.  Here we will clean our raw datasets and train the [Sentencepiece](https://github.com/google/sentencepiece/blob/master/python/README.md) model to accommodate the expanded vocabulary given by the pre-training dataset.
 
-### Step 4 - Processing datasets for fine-tuning tasks
-With this(!!) Colab notebook, you can process the fine tuning datasets of your choice to generate data for training the different tasks we will submit to T5
+### Step 4 - Pre-Training and Fine-Tuning
+To pre-train and then, fine-tune T5, please follow the colab notebooks provided:
 
-### Step 5 - Pre-Training and Fine-Tuning
-To pre-train and then, fine-tune T5, please use the script we provide here:
+- [Pre-Training](http://)
+- [Fine-Tuning](http://)
 
-- Pre-Training(!!)
-- Fine-Tuning(!!)
+### Step 5 - Generate the predictions
+We generate results on different beams converting the model in pyTorch, if you want to generete predictions using a beam of 1, you can directly use the fine-tuning colab notebook linked above, once the model is fine-tuned, you can generate custum prediction. 
+The code to convert the model is available [here](http://)
+while to compute perfect predictions, almost perfect predictions, codeBleu and bleu, we used [this](http://) other colab notebook.
 
-### Step 6 - Generate the predictions
-First you need to convert the TF model into a pytorch model by using TF_to_Pytorch(!!) , then run Generate Results(!!)
-
-Our results: https://drive.google.com/drive/folders/14ywfhJorNNeWxgSV1bI0XIzlLAFu8odH?usp=sharing
+here you can see [Our results](https://docs.google.com/spreadsheets/d/1JBdZZaGhOSGLIKkZjkEWvRudg-TIWCuaeYTxGnTPOyE/edit?usp=sharing)
