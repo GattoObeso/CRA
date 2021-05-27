@@ -11,7 +11,7 @@ To Set up a new GCS Bucket, please follow the [orignal guide](https://cloud.goog
 ### Step 2 - Get the datasets and all our utilities
 
 #### Pre-Training
-Obtained by mining [Stack Overflow]([https://www.brentozar.com/archive/2015/10/how-to-download-the-stack-overflow-database-via-bittorrent/) and [CodeSearchNet](https://github.com/github/CodeSearchNet) data. 
+Obtained by mining [Stack Overflow](https://www.brentozar.com/archive/2015/10/how-to-download-the-stack-overflow-database-via-bittorrent/) and [CodeSearchNet](https://github.com/github/CodeSearchNet) data. 
 
 #### Fine-Tuning
 We will fine tune our T5 small model on different datasets obtained by mining code review data from Gerrit and GitHub repositories
