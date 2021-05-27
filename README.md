@@ -36,7 +36,6 @@ To pre-train and then, fine-tune T5, please follow the colab notebooks provided:
 
 ### Step 5 - Generate the predictions
 We generate results on different beams converting the model in pyTorch, if you want to generete predictions using a beam of 1, you can directly use the fine-tuning colab notebook linked above, once the model is fine-tuned, you can generate custum prediction. 
-The code to convert the model is available [here](http://)
-while to compute perfect predictions, almost perfect predictions, codeBleu and bleu, we used [this](http://) other colab notebook.
+The code to convert the model is available [here](https://github.com/masies/CRA/blob/main/Replication_package_pytorchConversion.ipynb) and will also have all the functionalities to compute perfect predictions, almost perfect predictions, codeBleu and BLEU.
 
 here you can see [Our results](https://docs.google.com/spreadsheets/d/1JBdZZaGhOSGLIKkZjkEWvRudg-TIWCuaeYTxGnTPOyE/edit?usp=sharing)
