@@ -26,7 +26,7 @@ Our new Large dataset
 ### (optional) Step 2.5 - Process the datasets
 All our datasets are alredy processed and it's all set up to start pre-training and fine-tuning the models
 
-However, if you want to replicate our pre-processing steps, you just need to follow [this](http://) Colab notebook.  Here we will clean our raw datasets and train the [Sentencepiece](https://github.com/google/sentencepiece/blob/master/python/README.md) model to accommodate the expanded vocabulary given by the pre-training dataset.
+However, if you want to replicate our pre-processing steps, you just need to follow [this](https://github.com/masies/CRA/blob/main/Replication_package_PreProcessing.ipynb) Colab notebook.  Here we will clean our raw datasets and train the [Sentencepiece](https://github.com/google/sentencepiece/blob/master/python/README.md) model to accommodate the expanded vocabulary given by the pre-training dataset.
 
 ### Step 4 - Pre-Training and Fine-Tuning
 To pre-train and then, fine-tune T5, please follow the colab notebooks provided:
