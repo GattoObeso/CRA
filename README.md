@@ -6,7 +6,7 @@ In this work, we investigate the capabilities of Generative Pre-trained Transfor
 
 ### Step 1 - Set up a GCS Bucket 
 This GCS Bucket will hold all the data needed for Setting up, pre-training, fine-tuning, and testing our T5 model.
-To Set up a new GCS Bucket, please follow the [original guide](https://cloud.google.com/storage/docs/quickstart-console.) provided by Google. 
+To Set up a new GCS Bucket, please follow the [original guide](https://cloud.google.com/storage/docs/quickstart-console) provided by Google. 
 
 ### Step 2 - Get the datasets and all our utilities
 You need to have [this](https://zenodo.org/record/4812785) folder on your GSC bucket. It will contain all of our data and some utilities to replicate our results.
