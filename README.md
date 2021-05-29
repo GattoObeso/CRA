@@ -9,7 +9,7 @@ This GCS Bucket will hold all the data needed for Setting up, pre-training, fine
 To Set up a new GCS Bucket, please follow the [original guide](https://cloud.google.com/storage/docs/quickstart-console) provided by Google. 
 
 ### Step 2 - Get the datasets and all our utilities
-You need to have [this](https://zenodo.org/record/4812785) folder on your GSC bucket. It will contain all of our data and some utilities to replicate our results.
+You need to have [this folder](https://zenodo.org/record/4812785) on your GSC bucket. It will contain all of our data and some utilities to replicate our results.
 
 In particular you will have:
 - **Pre-Training dataset** Obtained by mining [Stack Overflow](https://www.brentozar.com/archive/2015/10/how-to-download-the-stack-overflow-database-via-bittorrent/) and [CodeSearchNet](https://github.com/github/CodeSearchNet) data. 
