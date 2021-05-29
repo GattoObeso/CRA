@@ -24,16 +24,16 @@ Our new Large dataset
 ### (optional) Step 2.5 - Process the raw datasets
 All our datasets are already processed, and it's all set up to start pre-training and fine-tuning the models.
 
-However, if you want to replicate our pre-processing steps, you just need to follow [this Colab notebook](https://github.com/masies/CRA/blob/main/Replication_package_PreProcessing.ipynb).  Here we will clean our raw datasets and train the [Sentencepiece](https://github.com/google/sentencepiece/blob/master/python/README.md) model to accommodate the expanded vocabulary given by the pre-training dataset.
+However, if you want to replicate our pre-processing steps, you just need to follow [this Colab notebook](https://github.com/masies/CRA/blob/main/replication_package/Replication_package_PreProcessing.ipynb).  Here we will clean our raw datasets and train the [Sentencepiece](https://github.com/google/sentencepiece/blob/master/python/README.md) model to accommodate the expanded vocabulary given by the pre-training dataset.
 
 ### Step 3 - Pre-Training and Fine-Tuning
 To pre-train and then fine-tune T5, please follow the colab notebooks provided:
 
-- [Pre-Training Colab notebook](https://github.com/masies/CRA/blob/main/Replication_package_PreTraining.ipynb)
-- [Fine-Tuning Colab notebook](https://github.com/masies/CRA/blob/main/Replication_package_FineTuning.ipynb)
+- [Pre-Training Colab notebook](https://github.com/masies/CRA/blob/main/replication_package/Replication_package_PreTraining.ipynb)
+- [Fine-Tuning Colab notebook](https://github.com/masies/CRA/blob/main/replication_package/Replication_package_FineTuning.ipynb)
 
 ### Step 4 - Generate the predictions
 We generate results on different beams converting the model in PyTorch; if you want to generate predictions using a beam of 1, you can directly use the fine-tuning colab notebook linked above, once the model is fine-tuned, you can generate custom prediction. 
-To convert the model use [This Colab noteebook](https://github.com/masies/CRA/blob/main/Replication_package_pytorchConversion.ipynb) where you also have all the functionalities to compute perfect predictions, almost perfect predictions, codeBleu and BLEU.
+To convert the model use [This Colab noteebook](https://github.com/masies/CRA/blob/main/replication_package/Replication_package_pytorchConversion.ipynb) where you also have all the functionalities to compute perfect predictions, almost perfect predictions, codeBleu and BLEU.
 
 here you can see [Our results](https://docs.google.com/spreadsheets/d/1JBdZZaGhOSGLIKkZjkEWvRudg-TIWCuaeYTxGnTPOyE/edit?usp=sharing)
